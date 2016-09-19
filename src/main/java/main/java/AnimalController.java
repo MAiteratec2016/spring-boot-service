@@ -37,8 +37,13 @@ public class AnimalController {
 		return new ResponseEntity<String>("Deleted animal " + animalName, HttpStatus.OK);
 	}
 	
-	@RequestMapping("/test") 
+	@RequestMapping(path = "/test") 
 	public ResponseEntity<String> test() {
+		return new ResponseEntity<String>("TEST", HttpStatus.OK);
+	}
+	
+	@RequestMapping("/hallo") 
+	public ResponseEntity<String> hallo() {
 		return new ResponseEntity<String>("TEST", HttpStatus.OK);
 	}
 }

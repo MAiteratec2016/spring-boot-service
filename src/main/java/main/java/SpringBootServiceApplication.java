@@ -24,8 +24,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @SpringBootApplication
 public class SpringBootServiceApplication implements CommandLineRunner {
-
-	public static final String DEFAULT_INCLUDE_PATTERN = "/animals.*";
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootServiceApplication.class, args);
@@ -41,7 +39,6 @@ public class SpringBootServiceApplication implements CommandLineRunner {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 		          .apis(RequestHandlerSelectors.any())
-		          .paths(regex(DEFAULT_INCLUDE_PATTERN))
 		          .build();
 	}
 
